@@ -7,21 +7,21 @@ using TMPro;
 
 public class MenuController : MonoBehaviour
 {
-    [Header("Volume Setting")]
+    //Volume Settings
     [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 1.0f;
+    [SerializeField] private int defaultVolume = 10;
 
-    [Header("Gameplay Settings")]
+    //Gameplay Settings
     [SerializeField] private TMP_Text controllerSensTextValue = null;
     [SerializeField] private Slider controllerSensSlider = null;
     [SerializeField] private int defaultSens = 4;
     public int mainControllerSens = 4;
 
-    [Header("Toggle Settings")]
+    //Toggle Settings
     [SerializeField] private Toggle subtitle = null;
 
-    [Header("Display Settings")]
+    //Display Settings
     [SerializeField] private Slider brightnessSlider = null;
     [SerializeField] private TMP_Text brightnessTextValue = null;
     [SerializeField] private float defaultBrightness = 1;
@@ -34,15 +34,15 @@ public class MenuController : MonoBehaviour
     private bool _isFullScreen;
     private float _brightnessLvel;
 
-    [Header("Confirmation")]
+    //Confirmation
     [SerializeField] private GameObject confirmationPrompt = null;
 
-    [Header("Levels To Load")]
+    //Levels To Load
     public string newGameLevel;
     private string levelToLoad;
     [SerializeField] private GameObject noSaveGame = null;
 
-    [Header("Resolution Dropdown")]
+    //Resolution Dropdown
     public TMP_Dropdown resolutionDropdown;
     private Resolution[] resolutions;
 
@@ -103,7 +103,7 @@ public class MenuController : MonoBehaviour
     public void setVolume(float volume)
     {
         AudioListener.volume = volume;
-        volumeTextValue.text = volume.ToString("0.0");
+        volumeTextValue.text = volume.ToString("0");
     }
 
     public void volumeApply()
@@ -136,7 +136,7 @@ public class MenuController : MonoBehaviour
     public void setBrightness(float brightness)
     {
         _brightnessLvel = brightness;
-        brightnessTextValue.text = brightness.ToString("0.0");
+        brightnessTextValue.text = brightness.ToString("0");
     }
 
     public void setFullScreen(bool isFullScreen)
@@ -163,7 +163,7 @@ public class MenuController : MonoBehaviour
         if(menuType == "Display")
         {
             brightnessSlider.value = defaultBrightness;
-            brightnessTextValue.text = defaultBrightness.ToString("0.0");
+            brightnessTextValue.text = defaultBrightness.ToString("0");
 
             qualityDropdown.value = 1;
             QualitySettings.SetQualityLevel(1);
@@ -181,7 +181,7 @@ public class MenuController : MonoBehaviour
         {
             AudioListener.volume = defaultVolume;
             volumeSlider.value = defaultVolume;
-            volumeTextValue.text = defaultVolume.ToString("0.0");
+            volumeTextValue.text = defaultVolume.ToString("0");
             volumeApply();
         }
         if(menuType == "Gameplay")
