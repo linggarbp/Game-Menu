@@ -774,6 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &106105647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &118327780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,6 +1484,7 @@ GameObject:
   - component: {fileID: 214645264}
   - component: {fileID: 214645263}
   - component: {fileID: 214645262}
+  - component: {fileID: 214645265}
   m_Layer: 5
   m_Name: QualityDropdown
   m_TagString: Untagged
@@ -1574,9 +1577,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 542642390}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: setQuality
+      - m_Target: {fileID: 214645265}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: GetQuality
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1625,6 +1628,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214645260}
   m_CullTransparentMesh: 1
+--- !u!114 &214645265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214645260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 214645262}
 --- !u!1 &261512509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &270628886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,8 +2820,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3271,6 +3288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &490408092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,12 +3405,10 @@ MonoBehaviour:
   brightnessSlider: {fileID: 106105649}
   brightnessTextValue: {fileID: 1770392357}
   defaultBrightness: 1
-  qualityDropdown: {fileID: 214645262}
   fullScreenToggle: {fileID: 2100372458}
   confirmationPrompt: {fileID: 957526475}
   newGameLevel: Level1
   noSaveGame: {fileID: 1928108966}
-  resolutionDropdown: {fileID: 1858788356}
 --- !u!4 &542642391
 Transform:
   m_ObjectHideFlags: 0
@@ -3809,6 +3825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &598666644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4648,6 +4665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &745887823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,6 +5315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &893003908
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,6 +5869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &957526475
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,6 +6608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1128429773
 GameObject:
   m_ObjectHideFlags: 0
@@ -7028,6 +7049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1161186203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7333,6 +7355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1254517142
 GameObject:
   m_ObjectHideFlags: 0
@@ -7343,6 +7366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254517143}
   - component: {fileID: 1254517144}
+  - component: {fileID: 1254517145}
   m_Layer: 5
   m_Name: ToggleMute
   m_TagString: Untagged
@@ -7419,6 +7443,18 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1254517145}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: TglMute
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 542642390}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: 
@@ -7432,6 +7468,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1254517145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254517142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1259930927
 GameObject:
   m_ObjectHideFlags: 0
@@ -7801,6 +7850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1306110729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8928,6 +8978,7 @@ GameObject:
   - component: {fileID: 1501373478}
   - component: {fileID: 1501373477}
   - component: {fileID: 1501373476}
+  - component: {fileID: 1501373479}
   m_Layer: 5
   m_Name: ResetDefaultBtn
   m_TagString: Untagged
@@ -9009,6 +9060,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Gameplay
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1501373479}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: BtnDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1501373477
@@ -9108,6 +9171,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501373474}
   m_CullTransparentMesh: 1
+--- !u!114 &1501373479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501373474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1522913249
 GameObject:
   m_ObjectHideFlags: 0
@@ -9233,6 +9309,7 @@ GameObject:
   - component: {fileID: 1585341811}
   - component: {fileID: 1585341810}
   - component: {fileID: 1585341809}
+  - component: {fileID: 1585341812}
   m_Layer: 5
   m_Name: ResetDefaultBtn
   m_TagString: Untagged
@@ -9314,6 +9391,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Display
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1585341812}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: BtnDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1585341810
@@ -9413,6 +9502,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585341807}
   m_CullTransparentMesh: 1
+--- !u!114 &1585341812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585341807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1589039676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9642,6 +9744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1660073913
 GameObject:
   m_ObjectHideFlags: 0
@@ -10012,6 +10115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1694428860
 GameObject:
   m_ObjectHideFlags: 0
@@ -11019,6 +11123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1793512007
 GameObject:
   m_ObjectHideFlags: 0
@@ -11133,7 +11238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1920x1080
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11160,8 +11265,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11318,6 +11423,7 @@ GameObject:
   - component: {fileID: 1858788359}
   - component: {fileID: 1858788358}
   - component: {fileID: 1858788356}
+  - component: {fileID: 1858788360}
   m_Layer: 5
   m_Name: ResoDropdown
   m_TagString: Untagged
@@ -11386,9 +11492,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 542642390}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: SetResolution
+      - m_Target: {fileID: 1858788360}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: GetReso
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11461,6 +11567,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858788355}
   m_CullTransparentMesh: 1
+--- !u!114 &1858788360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858788355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 1858788356}
 --- !u!1 &1865562889
 GameObject:
   m_ObjectHideFlags: 0
@@ -11690,6 +11809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1885318778
 GameObject:
   m_ObjectHideFlags: 0
@@ -11700,6 +11820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885318779}
   - component: {fileID: 1885318780}
+  - component: {fileID: 1885318781}
   m_Layer: 5
   m_Name: ToggleSubtitle
   m_TagString: Untagged
@@ -11775,8 +11896,33 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254517145}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: TglSub
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1885318781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885318778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1895971829
 GameObject:
   m_ObjectHideFlags: 0
@@ -12018,6 +12164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1906602669
 GameObject:
   m_ObjectHideFlags: 0
@@ -12334,6 +12481,7 @@ GameObject:
   - component: {fileID: 1928620192}
   - component: {fileID: 1928620191}
   - component: {fileID: 1928620190}
+  - component: {fileID: 1928620193}
   m_Layer: 5
   m_Name: ResetDefaultBtn
   m_TagString: Untagged
@@ -12415,6 +12563,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Audio
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1501373479}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: BtnDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1928620191
@@ -12514,6 +12674,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928620188}
   m_CullTransparentMesh: 1
+--- !u!114 &1928620193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928620188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &1955287747
 GameObject:
   m_ObjectHideFlags: 0
@@ -13068,6 +13241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &2095615212
 GameObject:
   m_ObjectHideFlags: 0
@@ -13373,6 +13547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &2100372456
 GameObject:
   m_ObjectHideFlags: 0
@@ -13383,6 +13558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100372457}
   - component: {fileID: 2100372458}
+  - component: {fileID: 2100372459}
   m_Layer: 5
   m_Name: ToggleFullscreen
   m_TagString: Untagged
@@ -13459,6 +13635,18 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1254517145}
+        m_TargetAssemblyTypeName: Debugging, Assembly-CSharp
+        m_MethodName: TglScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 542642390}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: setFullScreen
@@ -13471,7 +13659,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
+--- !u!114 &2100372459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100372456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfbb59a6228e424fab3407722ccdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
 --- !u!1 &2128024789
 GameObject:
   m_ObjectHideFlags: 0

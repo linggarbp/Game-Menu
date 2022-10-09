@@ -27,10 +27,8 @@ public class MenuController : MonoBehaviour
     [SerializeField] private float defaultBrightness = 1;
 
     [Space(10)]
-    [SerializeField] private TMP_Dropdown qualityDropdown;
     [SerializeField] private Toggle fullScreenToggle;
 
-    private int _qualityLevel;
     private bool _isFullScreen;
     private float _brightnessLvel;
 
@@ -41,41 +39,6 @@ public class MenuController : MonoBehaviour
     public string newGameLevel;
     private string levelToLoad;
     [SerializeField] private GameObject noSaveGame = null;
-
-    //Resolution Dropdown
-    public TMP_Dropdown resolutionDropdown;
-    private Resolution[] resolutions;
-
-    private void Start()
-    {
-        resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
-
-        List<string> options = new List<string>();
-
-        int currentResolutionIndex = 0;
-
-        for(int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + "x" + resolutions[i].height;
-            options.Add(option);
-
-            if(resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
-
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
-    }
-
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
 
     public void NewGameYes()
     {
@@ -144,16 +107,9 @@ public class MenuController : MonoBehaviour
         _isFullScreen = isFullScreen;
     }
 
-    public void setQuality(int qualityIndex)
-    {
-        _qualityLevel = qualityIndex;
-    }
-
     public void displayApply()
     {
         PlayerPrefs.SetFloat("masterBrightness", _brightnessLvel);
-        PlayerPrefs.SetInt("masterQuality", _qualityLevel);
-        QualitySettings.SetQualityLevel(_qualityLevel);
         PlayerPrefs.SetInt("masterFullscreen", (_isFullScreen ? 1 : 0));
         Screen.fullScreen = _isFullScreen;
     }
@@ -165,15 +121,8 @@ public class MenuController : MonoBehaviour
             brightnessSlider.value = defaultBrightness;
             brightnessTextValue.text = defaultBrightness.ToString("0");
 
-            qualityDropdown.value = 1;
-            QualitySettings.SetQualityLevel(1);
-
             fullScreenToggle.isOn = false;
             Screen.fullScreen = false;
-
-            Resolution currentResolution = Screen.currentResolution;
-            Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen);
-            resolutionDropdown.value = resolutions.Length;
             displayApply();
         }
 
